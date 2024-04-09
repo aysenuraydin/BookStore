@@ -1,0 +1,33 @@
+Api katmanı m.a.webapi.cors paketi indir
+
+
+Cd
+Ls
+dotnet —version
+dotnet new list
+dotnet new web -o Eticaret.Web.Mvc -f net8.0
+dotnet watch
+Ctrl + c
+
+Dotnet new webapi -o Eticaret.API
+Microsoft.AspNet.WebApi.Cors
+
+
+Sm.Eticaret.Domain
+dotnet new web -o Eticaret.Persistence.Ef -f net8.0
+http://localhost:5288/
+
+
+dotnet ef migrations add InitialCreate --context EticaretDbContext
+dotnet ef database update
+dotnet ef migrations add InitialCreate --output-dir ../Eticaret.Persistence.Ef/Migrations
+dotnet ef database update --output-dir 
+
+
+if (id == null) return BadRequest();
+if (kategori == null) return NotFound();
+
+var viewname = (isApproved) ? "GreenCard" : "RedCard";
+            return View(viewname ,new ProductSummaryViewModel() 
+
+mvc-core-action
