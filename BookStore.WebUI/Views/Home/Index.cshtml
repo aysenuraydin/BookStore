@@ -1,0 +1,22 @@
+@model ProductListDTO
+@{
+    Layout = null;
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col">@Model.Id</div>
+        <div class="col">@Model.Name</div>
+        <div class="col">@Model.Price</div>
+        <div class="col">@Model.Details</div>
+        <div class="col">@Model.StockAmount</div>
+        <div class="col">@Model.CreatedAt</div>
+        <div class="col">@Model.IsConfirmed</div>
+        <div class="col">@Model.Enabled</div>
+        <div class="col">@Model.CategoryId</div>
+        <div class="col">@Model.ProductImageCount</div>
+        <div class="col">@Model.ProductCommentCount</div>
+    </div>
+
+</div>

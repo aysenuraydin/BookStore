@@ -30,4 +30,9 @@ if (kategori == null) return NotFound();
 var viewname = (isApproved) ? "GreenCard" : "RedCard";
             return View(viewname ,new ProductSummaryViewModel() 
 
-mvc-core-action
+mvc-core-action şeklinde kısaltma
+
+
+
+\MovieApp\Views >dotnet new viewimports 
+\MovieApp\Views>dotnet new viewstart
