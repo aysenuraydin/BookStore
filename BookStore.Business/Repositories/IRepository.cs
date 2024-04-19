@@ -16,7 +16,7 @@ namespace BookStore.Business.Repositories
         Task<T> FindAsync(int id);
 
         int Add(T entity);
-        Task AddAsync(T entity);
+        Task<int> AddAsync(T entity);
 
         int Update(T entity);
         Task<int> UpdateAsync(T entity);

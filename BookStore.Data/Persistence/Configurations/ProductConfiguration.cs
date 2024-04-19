@@ -14,7 +14,6 @@ namespace BookStore.Data.Configurations
             builder.Property(u => u.Details).IsRequired();
             builder.Property(u => u.StockAmount).IsRequired();
             builder.Property(u => u.CreatedAt).IsRequired();
-            builder.Property(u => u.IsConfirmed).IsRequired();
             builder.Property(u => u.Enabled).IsRequired();
             builder.Property(u => u.CategoryId).IsRequired();
         }
