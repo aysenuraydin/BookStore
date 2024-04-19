@@ -1,22 +1,20 @@
-@model ProductListDTO
-@{
-    Layout = null;
-}
+@model IEnumerable<ProductListDTO>
 
 <div class="container">
 
-    <div class="row">
-        <div class="col">@Model.Id</div>
-        <div class="col">@Model.Name</div>
-        <div class="col">@Model.Price</div>
-        <div class="col">@Model.Details</div>
-        <div class="col">@Model.StockAmount</div>
-        <div class="col">@Model.CreatedAt</div>
-        <div class="col">@Model.IsConfirmed</div>
-        <div class="col">@Model.Enabled</div>
-        <div class="col">@Model.CategoryId</div>
-        <div class="col">@Model.ProductImageCount</div>
-        <div class="col">@Model.ProductCommentCount</div>
-    </div>
-
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col">@item.Id</div>
+            <div class="col">@item.Name</div>
+            <div class="col">@item.Price</div>
+            <div class="col">@item.Details</div>
+            <div class="col">@item.StockAmount</div>
+            <div class="col">@item.CreatedAt</div>
+            <div class="col">@item.Enabled</div>
+            <div class="col">@item.CategoryId</div>
+            <div class="col">@item.ProductImageCount</div>
+            <div class="col">@item.ProductCommentCount</div>
+        </div>
+    }
 </div>

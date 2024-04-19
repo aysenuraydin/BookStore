@@ -58,9 +58,10 @@ namespace BookStore.Business.Repositories
             _dbSet.Add(entity);
             return SaveChanges();
         }
-        public async Task AddAsync(T entity)
+        public async Task<int> AddAsync(T entity)
         {
             await _dbSet.AddAsync(entity);
+            return await SaveChangesAsync();
         }
 
         public int Update(T entity)

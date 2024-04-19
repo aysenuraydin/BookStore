@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/b4b46d6b25.js" crossorigin="anonymous"></script>
+    @RenderSection("Styles", false)
+    <title>Book Store</title>
+</head>
+
+<body>
+    @await Html.PartialAsync("_Topbar")
+
+    <header class="sticky-top">
+        @await Html.PartialAsync("_Navbar")
+    </header>
+
+
+
+    @await Component.InvokeAsync("Categories")<main>
+        <div class="container mt-4 p-5">
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer>
+        @await Html.PartialAsync("_Footer")
+    </footer>
+
+    <!-- Back to top -->
+    @await Html.PartialAsync("_BackToTop")
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="/assets/js/main.js" type="text/js">
+
+    @RenderSection("Scripts", false)
+
+</body>
+
+</html>

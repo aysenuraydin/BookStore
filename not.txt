@@ -36,3 +36,11 @@ mvc-core-action şeklinde kısaltma
 
 \MovieApp\Views >dotnet new viewimports 
 \MovieApp\Views>dotnet new viewstart
+mvc-core-action kısayol
+
+npm init --yes package.json oluştu
+npm i bootstrap node module klasöru oluştu  pa.json dosyasına eklendi,
+node moduü silersek tekrar .json dosyasına göre yüklenmesi için
+npm install dedik
+
+npm i bootstrap-icons

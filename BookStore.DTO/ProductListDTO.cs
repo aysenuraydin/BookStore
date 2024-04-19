@@ -8,7 +8,6 @@ namespace BookStore.DTO
         public string Details { get; set; } = null!;
         public byte StockAmount { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public bool IsConfirmed { get; set; } = false;
         public bool Enabled { get; set; } = false;
         public int CategoryId { get; set; }
         public int ProductImageCount { get; set; }

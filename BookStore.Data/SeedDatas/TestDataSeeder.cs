@@ -24,17 +24,17 @@ public static class TestDataSeeder
 
     modelBuilder.Entity<Product>().HasData(
       new List<Product>() {
-           new Product { Id=1, Name="Yelek 1", Price=619, Details="ürün açıklama", StockAmount=10, Enabled=true, IsConfirmed= true, CategoryId=1},
-           new Product { Id=2, Name="Yelek 2", Price=619, Details="ürün açıklama", StockAmount=10, Enabled=false, IsConfirmed= true, CategoryId=1},
-           new Product { Id=3, Name="Yelek 3", Price=510, Details="ürün açıklama", StockAmount=10, Enabled=true, IsConfirmed= true, CategoryId=1},
+           new Product { Id=1, Name="Yelek 1", Price=619, Details="ürün açıklama", StockAmount=10, Enabled=true, CategoryId=1},
+           new Product { Id=2, Name="Yelek 2", Price=619, Details="ürün açıklama", StockAmount=10, Enabled=false, CategoryId=1},
+           new Product { Id=3, Name="Yelek 3", Price=510, Details="ürün açıklama", StockAmount=10, Enabled=true, CategoryId=1},
 
-           new Product { Id=4, Name="Triko 1", Price=700, Details="ürün açıklama", StockAmount=10, Enabled=true, IsConfirmed= true, CategoryId=2},
-           new Product { Id=5, Name="Triko 2", Price=700, Details="ürün açıklama", StockAmount=10, Enabled=false, IsConfirmed= true, CategoryId=2},
-           new Product { Id=6, Name="Triko 3", Price=700, Details="ürün açıklama", StockAmount=10, Enabled=false, IsConfirmed= true, CategoryId=2},
+           new Product { Id=4, Name="Triko 1", Price=700, Details="ürün açıklama", StockAmount=10, Enabled=true, CategoryId=2},
+           new Product { Id=5, Name="Triko 2", Price=700, Details="ürün açıklama", StockAmount=10, Enabled=false, CategoryId=2},
+           new Product { Id=6, Name="Triko 3", Price=700, Details="ürün açıklama", StockAmount=10, Enabled=false, CategoryId=2},
 
-           new Product { Id=7, Name="Sweatshirt 1", Price=320, Details="ürün açıklama", StockAmount=10, Enabled=true, IsConfirmed= true, CategoryId=3},
-           new Product { Id=8, Name="Sweatshirt 2", Price=450, Details="ürün açıklama", StockAmount=10, Enabled=false, IsConfirmed= true, CategoryId=3},
-           new Product { Id=9, Name="Sweatshirt 3", Price=600, Details="ürün açıklama", StockAmount=10, Enabled=true, IsConfirmed= true, CategoryId=3}
+           new Product { Id=7, Name="Sweatshirt 1", Price=320, Details="ürün açıklama", StockAmount=10, Enabled=true, CategoryId=3},
+           new Product { Id=8, Name="Sweatshirt 2", Price=450, Details="ürün açıklama", StockAmount=10, Enabled=false, CategoryId=3},
+           new Product { Id=9, Name="Sweatshirt 3", Price=600, Details="ürün açıklama", StockAmount=10, Enabled=true, CategoryId=3}
 }
    );
     /**/

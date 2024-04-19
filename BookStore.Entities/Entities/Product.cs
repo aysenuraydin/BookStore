@@ -32,9 +32,6 @@ public class Product : BaseEntity
     [Display(Name = "Oluşturma Tarihi")]
     public DateTime CreatedAt { get; set; } = DateTime.Now;
 
-    [Display(Name = "Onaylı Mı?")]
-    public bool IsConfirmed { get; set; } = false;
-
     [Display(Name = "Satışta Mı?")]
     public bool Enabled { get; set; } = false;
     [Display(Name = "Kategori")]
@@ -43,7 +40,7 @@ public class Product : BaseEntity
 
     #region Navigation Properties
     [Display(Name = "Kitap Categorileri")]
-    public List<Category> Categorys { get; set; } = new();
+    public List<Category> Categories { get; set; } = new();
     [Display(Name = "Kitap Yorumları")]
     public List<ProductComment> ProductComments { get; set; } = new();
     [Display(Name = "Kitap Resimleri")]
@@ -51,7 +48,6 @@ public class Product : BaseEntity
 
     #endregion
 }
-
 
 
 
