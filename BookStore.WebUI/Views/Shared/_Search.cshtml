@@ -1,7 +1,6 @@
-<form class="d-flex search" role="search">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-        style="min-width: 200px !importan;">
-    <button class="btn btn-outline-dark" type="submit">
-        <i class="bi bi-search"></i>
+<form asp-controller="Home" asp-action="Listing" method="get" class="d-flex search">
+    <input id="q" name="q" class="form-control me-2" type="text" placeholder="Ara">
+    <button class="btn btn-outline-dark searchBtn my-2 my-sm-0" type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
     </button>
 </form>

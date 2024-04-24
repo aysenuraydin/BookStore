@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 
 <head>
@@ -20,11 +20,16 @@
         @await Html.PartialAsync("_Navbar")
     </header>
 
-    @await Component.InvokeAsync("Categories")
-
     <main>
-        <div class="container mt-4 p-5">
-            @RenderBody()
+        <div class="container-fluid container-md">
+            <div class="row">
+                <div class="col col-md-3 my-5 ">
+                    @await Html.PartialAsync("_AdminPanel")
+                </div>
+                <div class="col col-md-9 mt-4 py-5 content container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
         </div>
     </main>
 

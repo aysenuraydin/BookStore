@@ -1,12 +1,13 @@
-
-using BookStore.DTO;
+﻿using BookStore.DTO;
 using BookStore.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Text;
 using System.Text.Json;
 
-namespace BookStore.WebUI.Controllers
+
+namespace BookStore.WebUI.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class HomeController : Controller
     {
         private readonly HttpClient _httpClient;
@@ -25,6 +26,7 @@ namespace BookStore.WebUI.Controllers
 
             }
         }
+
         public IActionResult Create()
         {
             return View(new Product());
@@ -129,7 +131,6 @@ namespace BookStore.WebUI.Controllers
             }
         }
 
-
     }
-
 }
+

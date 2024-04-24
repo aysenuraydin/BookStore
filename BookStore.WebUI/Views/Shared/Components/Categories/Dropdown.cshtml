@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Category>
+
+<ul class="dropdown-menu shadow">
+    <li><a asp-action="Listing" asp-Controller="Home" asp-route-id="" class="dropdown-item"> Tüm Ürünler</a></li>
+    @if (Model != null && Model.Any())
+    {
+        @foreach (var kategori in Model)
+        {
+            <li>
+                <a asp-action="Listing" asp-Controller="Home" asp-route-id="@kategori.Id"
+                    class="dropdown-item">@kategori.Name</a>
+            </li>
+        }
+    }
+</ul>

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("i").css("color","red");
+    
     $(window).scroll(function(){
        if($(window).scrollTop()>10){
            $(".backtotop").fadeIn();
@@ -12,5 +12,11 @@ $(document).ready(function(){
       $("html,body").animate({scrollTop:0},700);
       return false;
     });
+
+    $(".fa-fa").click(function(){  
+        console.log("tıkladın!!!");
+        return false;
+      });
+
 });
   

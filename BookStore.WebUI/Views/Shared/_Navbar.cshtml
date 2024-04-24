@@ -16,14 +16,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">Kategoriler <i class="bi bi-chevron-down"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        @* <li>
-                        <hr class="dropdown-divider">
-                        </li> *@
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                    @await Component.InvokeAsync("Categories", "dropdown")
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" asp-controller="Home" asp-action="Index">
@@ -46,42 +39,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="d-flex flex-row">
-            <div class="dropdown p-2">
-                <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-regular fa-user fs-4"></i>
-                </a>
-                <ul class="dropdown-menu window">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
-
-            <div class="dropdown p-2">
-                <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-regular fa-heart fs-4"></i>
-                </a>
-                <ul class="dropdown-menu window">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
-
-            <div class="dropdown p-2">
-                <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-cart-dash fs-4"></i>
-                    <span
-                        class="position-absolute top-25 start-75 translate-middle badge rounded-pill bg-dark backet-badge-size border">
-                        12
-                    </span>
-                </a>
-                <ul class="dropdown-menu window">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
+            @await Html.PartialAsync("_Account")
+            @await Html.PartialAsync("_Favorites")
+            @await Html.PartialAsync("_Cart")
         </div>
     </div>
 </div>

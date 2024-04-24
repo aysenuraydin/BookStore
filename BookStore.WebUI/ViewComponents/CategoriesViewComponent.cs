@@ -15,12 +15,15 @@ namespace ticaret.Web.Mvc.ViewComponents
             _httpClient.BaseAddress = new Uri("http://localhost:5230/api/"); // API adresi
         }
 
-        public async Task<IViewComponentResult> InvokeAsync()
+        public async Task<IViewComponentResult> InvokeAsync(string? dropdown)
         {
 
             using (var response = await _httpClient.GetAsync("category"))
             {
                 List<Category> products = await response.Content.ReadFromJsonAsync<List<Category>>() ?? new();
+
+                if (dropdown == "dropdown") return View("Dropdown", products);
+
                 return View(products.Take(5));
 
             }

@@ -1,0 +1,61 @@
+<div class="dropdown p-2 ">
+    <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-fa fa-regular fa-user fs-4"></i>
+    </a>
+    <ul class="dropdown-menu window shadow dropdown-account">
+        @* @if (User.Identity!.IsAuthenticated)
+        { *@
+        <li>
+            <a class="dropdown-item px-4 p-1" asp-controller="Profile" asp-action="Details">
+                <span>Profilim</span>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item px-4 p-1" asp-controller="Profile" asp-action="MyOrders">
+                <span>Siparişlerim</span>
+            </a>
+        </li>
+        @* if (User.IsInRole("seller"))
+        { *@
+        <li>
+            <a class="dropdown-item px-4 p-1" asp-controller="Product" asp-action="Index">
+                <span>Ürünlerim</span>
+            </a>
+        </li>
+        @* } *@
+
+        @* if (User.IsInRole("admin"))
+        { *@
+        <li>
+            <a class="dropdown-item px-4 p-1" asp-controller="Home" asp-action="Index" asp-area="Admin">
+                <span>Admin Paneli</span>
+            </a>
+        </li>
+        @* } *@
+
+        <li>
+            <a class="dropdown-item px-4 p-1" asp-controller="Auth" asp-action="Logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Çıkış Yap</span>
+            </a>
+        </li>
+
+        @* }
+        else
+        { *@
+        <li>
+            <a class="dropdown-item px-4 p-1" asp-controller="Auth" asp-action="Login">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <span>Giriş Yap </span>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item px-4 p-1" asp-controller="Auth" asp-action="Register">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Kayıt Ol</span>
+            </a>
+        </li>
+        @* } *@
+
+    </ul>
+</div>

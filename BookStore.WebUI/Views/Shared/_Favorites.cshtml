@@ -1,0 +1,39 @@
+<div class="dropdown p-2">
+    <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-fa fa-regular fa-heart fs-4"></i>
+    </a>
+    <div class="dropdown-menu window shadow p-2 dropdown-fav">
+        @* @if (!Model.Any())
+        {*@
+        <div>
+            <div class="alert alert-secondary p-4" colspan="12" role="alert">
+                <i class="fa-solid fa-exclamation"> </i>
+                Favorilerde ürününüz yok!
+            </div>
+        </div>
+        @* } *@
+
+
+        <div class="p-1">
+            <img class="backet-img m-1" src="https://via.placeholder.com/100x100" alt="Ürun resmi">
+            <img class="backet-img m-1" src="https://via.placeholder.com/100x100" alt="Ürun resmi">
+            <img class="backet-img m-1" src="https://via.placeholder.com/100x100" alt="Ürun resmi">
+        </div>
+        <div class="p-1">
+            <img class="backet-img m-1" src="https://via.placeholder.com/100x100" alt="Ürun resmi">
+            <img class="backet-img m-1" src="https://via.placeholder.com/100x100" alt="Ürun resmi">
+            <img class="backet-img m-1" src="https://via.placeholder.com/100x100" alt="Ürun resmi">
+        </div>
+        <div class="p-1">
+            <img class="backet-img m-1" src="https://via.placeholder.com/100x100" alt="Ürun resmi">
+            <img class="backet-img m-1" src="https://via.placeholder.com/100x100" alt="Ürun resmi">
+            <img class="backet-img m-1" src="https://via.placeholder.com/100x100" alt="Ürun resmi">
+        </div>
+
+
+        <div class="row d-flex text-align-center p-1 px-3">
+            <a class="btn btn-sm btn-dark col text-light" asp-action="Delete">Tüm Favorileri Gör</a>
+        </div>
+
+    </div>
+</div>

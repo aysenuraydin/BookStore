@@ -1,0 +1,51 @@
+@model Product;
+
+<div class="col-6">
+    <form asp-action="Edit" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="CreatedAt" />
+        @* <input type="hidden" asp-for="ProductComments" /> *@
+
+        <div class="form-group">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price" class="control-label"></label>
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Details" class="control-label"></label>
+            <div>
+                <textarea asp-for="Details" class="form-control" id="editor"></textarea>
+            </div>
+            <span asp-validation-for="Details" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="StockAmount" class="control-label"></label>
+            <input asp-for="StockAmount" class="form-control" />
+            <span asp-validation-for="StockAmount" class="text-danger"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Enabled" class="control-label"></label>
+            <input asp-for="Enabled" class="form-control" />
+            <span asp-validation-for="Enabled" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CategoryId" class="control-label"></label>
+            <input asp-for="CategoryId" class="form-control" />
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group my-3">
+            <input type="submit" value="Kaydet" class="btn btn-primary" />
+        </div>
+        <div>
+            <a asp-action="Index">Listeye Dön</a>
+        </div>
+    </form>
+</div>
